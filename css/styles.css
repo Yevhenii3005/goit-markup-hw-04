@@ -88,6 +88,14 @@ nav {
         color: #2e2f42;
         padding: 24px 0;
     }
+    .main-link::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 4px;
+        background-color: #4d5ae5;
+    
+    }
  
     .header-nav .link:hover,
     .header-nav .link:focus {
@@ -189,6 +197,16 @@ nav {
     color: #434455;
     
 }
+.features-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8E8F99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        margin-bottom: 8px;
+}
 .features-list {
     width: calc((100% - 72px) / 4);
 }
@@ -255,6 +273,38 @@ nav {
     width: calc((100% - 72px) / 4);
     
 }
+.social-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 8px;
+}
+    
+.social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        background: linear-gradient(135deg,
+                #5b5bd6 0%,
+                #5b5bd6 50%,
+                #4c56d6 50%,
+                #4c56d6 100%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+.social-icon:hover {
+        background: #31d0aa
+    }
+
+    .team-icon {
+        width: 16px;
+        height: 16px;
+        fill: #ffffff;
+    }
+
 /* Portfolio Section Styles */
 .portfolio {
     font-size: 36px;
@@ -274,10 +324,31 @@ nav {
     margin: 0;
     
 }
+.portfolio-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
 .portfolio-item {
     border-radius: 4px;
     width: calc((100% - 48px) / 3);
     background: #ffffff;
+    
+}
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    color: #ffffff;
+    padding: 40px 32px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+}
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
 }
 .portfolio-title {
     font-weight: 500;
@@ -306,26 +377,22 @@ nav {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;} 
 
-
 /* Footer Section Styles */
 .footer {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
     background-color: #2e2f42;
     padding: 100px 0;
+    color: #f4f4fd;
 }
 
 
-.footer .container{
+.footer-container {
     display: flex;
-    flex-direction: column;
     align-items: baseline;
-
-    
+    gap: 80px;
 }
-  
+
+
+
 .logo-footer {
     display: inline-block;
     margin-bottom: 16px;
@@ -337,7 +404,6 @@ nav {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-decoration: none;
-    margin-right: 120px;
 }
 
 .logo-studio {
@@ -347,3 +413,47 @@ nav {
 .footer-text {
     max-width: 264px;
 }
+
+
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.media-text {
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.footer-icon-links {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-links {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #404bbf;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.3s ease;
+}
+
+.footer-links:hover {
+    background-color: #31d0aa;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    fill: #f4f4fd;
+}
+
+
+
