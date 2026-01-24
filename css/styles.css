@@ -49,6 +49,11 @@ body {
 .header-container .container {
   display: flex;
   align-items: center;
+  box-shadow:
+    0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  background: #ffffff;
 }
 
 nav {
@@ -103,10 +108,9 @@ nav {
   left: 0;
   width: 100%;
   border-radius: 2px;
-  width: 48px;
   height: 4px;
 
-  background-color: #4d5ae5;
+  background-color: #404bbf;
 }
 
 .header-nav .link:hover,
@@ -215,6 +219,7 @@ nav {
   width: 264px;
   height: 112px;
   margin-bottom: 8px;
+  background-color: #f4f4fd;
 }
 .features-list {
   width: calc((100% - 72px) / 4);
@@ -313,8 +318,7 @@ nav {
 }
 
 .team-icon {
-  width: 16px;
-  height: 16px;
+
   fill: #ffffff;
 }
 
@@ -343,6 +347,14 @@ nav {
   border-radius: 4px;
   width: calc((100% - 48px) / 3);
   background: #ffffff;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover{
+  box-shadow:
+  0 2px 1px 0 rgba(46, 47, 66, 0.08),
+   0 1px 1px 0 rgba(46, 47, 66, 0.16),
+   0 1px 6px 0 rgba(46, 47, 66, 0.08);
+   cursor: pointer;
 }
 .portfolio-overlay {
   position: absolute;
@@ -382,10 +394,7 @@ nav {
   margin: 0;
 }
 
-.portfolio-item:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
+
 
 /* Footer Section Styles */
 .footer {
@@ -397,7 +406,7 @@ nav {
 .footer-container {
   display: flex;
   align-items: baseline;
-  gap: 80px;
+  gap: 120px;
 }
 
 .logo-footer {
@@ -432,7 +441,7 @@ nav {
   color: #ffffff;
 }
 
-.footer-icon-links {
+.footer-social-links {
   display: flex;
   gap: 16px;
 }
@@ -441,7 +450,7 @@ nav {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #404bbf;
+  background-color: #4d5ae5;
 
   display: flex;
   align-items: center;
@@ -453,9 +462,11 @@ nav {
 .footer-links:hover {
   background-color: #31d0aa;
 }
+.footer-links:focus {
+  background-color: #31d0aa;
+}
 
 .footer-icon {
-  width: 24px;
-  height: 24px;
+
   fill: #f4f4fd;
 }
